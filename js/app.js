@@ -98,11 +98,13 @@ console.log(phone);
 const modalTitle = document.getElementById('phoneDetailModalLabel');
 modalTitle.innerText = phone.name;
 const phoneDetails = document.getElementById('phone-details');
+console.log(phone.mainFeatures.sensors[0]);
 phoneDetails.innerHTML = `
     <img src="${phone.image}">
     <p>Release Date: ${phone.releaseDate ? phone.releaseDate : 'No Release Date Found'
     }</p>
     <h2>MainFeatures</h2>
+    <p>Sensor: ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[0] : 'No Sensor'}</p>
     <p>ChipSet: ${phone.mainFeatures ? phone.mainFeatures.chipSet : 'No ChipSet Information Found'}</p>
     <p>Storage: ${phone.mainFeatures ? phone.mainFeatures.storage : 'No Storage Information Found'}</p>
     <p>Memory: ${phone.mainFeatures ? phone.mainFeatures.memory : 'No Memory Information Found'}</p> 
